@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>latidos compartidos ❤️</title>
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+h1{
+    margin-top:40px;
+    font-size:38px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2{
+    margin-top:40px;
+}
+
+.frase{
+    width:85%;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.6;
+    animation: fadeIn 3s ease-in-out;
+}
+
+img{
+    width:85%;
+    max-width:400px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 0 25px rgba(255,0,150,0.7);
+    transition: transform 0.4s;
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+
+footer{
+    margin:40px 0;
+    font-size:14px;
+    opacity:0.8;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* corazones flotando */
+.corazon{
+    position: fixed;
+    bottom: -10px;
+    font-size:20px;
+    animation: subir 8s linear infinite;
+}
+
+@keyframes subir{
+    from{transform:translateY(0);}
+    to{transform:translateY(-110vh);}
+}
+</style>
+</head>
+<body>
+
+<h1>💖 ENTRE ESTRELLAS Y LATIDOS 💖</h1>
+
+<div class="frase">
+Eres mi rayito de luz en los días grises, la chispa que hace que todo
+ a mi alrededor brille y que mi corazón lata más rápido de felicidad.
+  Cada momento contigo se convierte en un recuerdo que quiero guardar para siempre: 
+  tu risa, tus abrazos, tu mirada, incluso tus silencios, porque todo de ti tiene un lugar especial en mi vida.
+   Contigo aprendí que el amor no solo se dice, sino que se siente en cada gesto, en cada palabra,
+    en cada instante compartido.
+     Gracias por ser esa persona que me hace soñar despierto, que me inspira a ser mejor,
+      que me enseña a amar con todo mi corazón. Cada día que pasa, siento que este rayito
+       que eres no solo ilumina mis días, sino que también llena de esperanza y magia cada rincón de mi alma.
+        No importa cuánto tiempo pase,siempre voy a cuidar de ti, siempre voy a elegir 
+        amarte y siempre voy a sentir que eres el regalo más hermoso que la vida pudo darme.<br>
+Tu mano encaja con la mía como si el destino lo hubiera escrito.<br><br>
+No importa lo que pase, no importa el tiempo…<br>
+<strong>Nunca te olvidaré.</strong><br><br>
+Eres mi lugar favorito en el mundo ❤️
+</div>
+
+<h2>✨ Nuestro Amor ✨</h2>
+<img src="juntos.jpeg">
+
+<h2>🤍 Tú 🤍</h2>
+<img src="mitad1.jpeg">
+
+<h2>🤍 Yo 🤍</h2>
+<img src="mitad2.jpeg">
+
+<footer>
+PARA SIEMPRE MI RAYITO❤️✨
+</footer>
+
+<!-- Música -->
+<audio id="miMusica" src="nunca_lo_olvides.mp3" loop></audio>
+<button onclick="document.getElementById('miMusica').play();">
+    🎵 HAZ CLIC AQUI MI RAYITO... ⚡
+</button>
+
+
+
+<script>
+function crearCorazon(){
+    const corazon = document.createElement("div");
+    corazon.classList.add("corazon");
+    corazon.innerHTML = "❤️";
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.animationDuration = (Math.random()*5+5)+"s";
+    document.body.appendChild(corazon);
+    setTimeout(()=>{corazon.remove();},8000);
+}
+setInterval(crearCorazon,500);
+</script>
+
+</body>
+</html>
